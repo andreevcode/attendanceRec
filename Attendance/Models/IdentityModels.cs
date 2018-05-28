@@ -20,6 +20,9 @@ namespace Attendance.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        //Insert fields for DB table's Datasets
+        public DbSet<Employee> Employees { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
