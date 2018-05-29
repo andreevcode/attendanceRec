@@ -22,6 +22,13 @@ namespace Attendance.Models
     {
         //Insert fields for DB table's Datasets
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Timelog> Timelogs { get; set; }
+        public DbSet<DepRelation> DepRelations { get; set; }
+
+        public DbSet<TimeShedule> TimeShedules { get; set; }
+        public DbSet<AttendanceLog> AttendanceLogs { get; set; }
+        public DbSet<AttendanceJobTime> AttendanceJobTimes { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

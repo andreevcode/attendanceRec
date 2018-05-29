@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AttendanceRecController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -209,12 +210,44 @@
     <Compile Include="Migrations\201805281753303_AddEmployeesDbSet.Designer.cs">
       <DependentUpon>201805281753303_AddEmployeesDbSet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805281805008_AddRequiredToSomeEmployeesFields.cs" />
+    <Compile Include="Migrations\201805281805008_AddRequiredToSomeEmployeesFields.Designer.cs">
+      <DependentUpon>201805281805008_AddRequiredToSomeEmployeesFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805281817311_AddLastFirstPartTables.cs" />
+    <Compile Include="Migrations\201805281817311_AddLastFirstPartTables.Designer.cs">
+      <DependentUpon>201805281817311_AddLastFirstPartTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805281822305_PopulateEmployees.cs" />
+    <Compile Include="Migrations\201805281822305_PopulateEmployees.Designer.cs">
+      <DependentUpon>201805281822305_PopulateEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805281930043_PopulateDepartments.cs" />
+    <Compile Include="Migrations\201805281930043_PopulateDepartments.Designer.cs">
+      <DependentUpon>201805281930043_PopulateDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805281941138_UpdateEmployeeIdInEmployees.cs" />
+    <Compile Include="Migrations\201805281941138_UpdateEmployeeIdInEmployees.Designer.cs">
+      <DependentUpon>201805281941138_UpdateEmployeeIdInEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805281947510_PopulateDepRealtions.cs" />
+    <Compile Include="Migrations\201805281947510_PopulateDepRealtions.Designer.cs">
+      <DependentUpon>201805281947510_PopulateDepRealtions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805282023259_PopulateTimeLog.cs" />
+    <Compile Include="Migrations\201805282023259_PopulateTimeLog.Designer.cs">
+      <DependentUpon>201805282023259_PopulateTimeLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805282037384_AddTablesPart2.cs" />
+    <Compile Include="Migrations\201805282037384_AddTablesPart2.Designer.cs">
+      <DependentUpon>201805282037384_AddTablesPart2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AttendanceJobTime.cs" />
     <Compile Include="Models\AttendanceLog.cs" />
     <Compile Include="Models\Department.cs" />
-    <Compile Include="Models\DepRelations.cs" />
+    <Compile Include="Models\DepRelation.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -282,6 +315,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\AttendanceRec\Index.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -305,6 +340,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805281753303_AddEmployeesDbSet.resx">
       <DependentUpon>201805281753303_AddEmployeesDbSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805281805008_AddRequiredToSomeEmployeesFields.resx">
+      <DependentUpon>201805281805008_AddRequiredToSomeEmployeesFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805281817311_AddLastFirstPartTables.resx">
+      <DependentUpon>201805281817311_AddLastFirstPartTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805281822305_PopulateEmployees.resx">
+      <DependentUpon>201805281822305_PopulateEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805281930043_PopulateDepartments.resx">
+      <DependentUpon>201805281930043_PopulateDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805281941138_UpdateEmployeeIdInEmployees.resx">
+      <DependentUpon>201805281941138_UpdateEmployeeIdInEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805281947510_PopulateDepRealtions.resx">
+      <DependentUpon>201805281947510_PopulateDepRealtions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805282023259_PopulateTimeLog.resx">
+      <DependentUpon>201805282023259_PopulateTimeLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805282037384_AddTablesPart2.resx">
+      <DependentUpon>201805282037384_AddTablesPart2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
