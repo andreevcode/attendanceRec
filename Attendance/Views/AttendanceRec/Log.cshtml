@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Attendance.Models.AttendanceLog>
+
+@{
+    ViewBag.Title = "Log";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Журнал посещений</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>Номер записи</th>
+        <th>Имя</th>
+        <th>Отчество</th>
+        <th>Фамилия</th>
+        <th>Время прихода</th>
+        <th>Время ухода</th>
+        <th>Дата</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.Employee.Name </td>
+        <td>@item.Employee.Patronymic</td>
+        <td>@item.Employee.Surname</td>
+        <td>@Html.DisplayFor(modelItem => item.TimeIn)</td>
+        <td>@Html.DisplayFor(modelItem => item.TimeOut)</td>
+        @if (item.Date==null)
+        {
+           <td><text>Дата не определена</text></td> 
+        }
+        else
+        {
+
+            <td>@(((DateTime)(item.Date)).ToLongDateString())</td>
+        }
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+            </td>
+        </tr>
+}
+
+</table>

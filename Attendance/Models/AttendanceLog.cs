@@ -15,10 +15,10 @@ namespace Attendance.Models
         [Required]
         public int EmployeeId { get; set; }
 
-        public TimeSpan TimeIn { get; set; }
+        public TimeSpan? TimeIn { get; set; }
 
-        public TimeSpan TimeOut { get; set; }
+        public TimeSpan? TimeOut { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
     }
 }

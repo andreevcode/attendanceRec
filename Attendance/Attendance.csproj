@@ -242,6 +242,14 @@
     <Compile Include="Migrations\201805282037384_AddTablesPart2.Designer.cs">
       <DependentUpon>201805282037384_AddTablesPart2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805290634323_InsertOneCortegeInAttendanceLog.cs" />
+    <Compile Include="Migrations\201805290634323_InsertOneCortegeInAttendanceLog.Designer.cs">
+      <DependentUpon>201805290634323_InsertOneCortegeInAttendanceLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805291106169_UpplyChangesToModels.cs" />
+    <Compile Include="Migrations\201805291106169_UpplyChangesToModels.Designer.cs">
+      <DependentUpon>201805291106169_UpplyChangesToModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AttendanceJobTime.cs" />
@@ -255,8 +263,11 @@
     <Compile Include="Models\TimeShedule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="SubmitButtonSelector.cs" />
+    <Compile Include="ViewModels\EmployeesAttendancesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -317,6 +328,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\AttendanceRec\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\AttendanceRec\Log.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -364,6 +376,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805282037384_AddTablesPart2.resx">
       <DependentUpon>201805282037384_AddTablesPart2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805290634323_InsertOneCortegeInAttendanceLog.resx">
+      <DependentUpon>201805290634323_InsertOneCortegeInAttendanceLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805291106169_UpplyChangesToModels.resx">
+      <DependentUpon>201805291106169_UpplyChangesToModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -20,7 +20,7 @@ namespace Attendance.Models
         public TimeSpan DayFinishTime { get; set; }
         public TimeSpan JobTime { get; set; }
 
-        [DataType(DataType.Date)]
+        //[DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
         public bool IsLate { get; set; }

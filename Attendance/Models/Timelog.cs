@@ -11,10 +11,10 @@ namespace Attendance.Models
         public int Id { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
+        //[DataType(DataType.Date)]
         public DateTime StartDate { get; set; }
 
-        [DataType(DataType.Date)]
+        //[DataType(DataType.Date)]
         public DateTime? FinishDate { get; set; }
 
         public Employee Employee { get; set; }
