@@ -9,9 +9,9 @@ namespace Attendance.ViewModels
     public class EmployeesAttendancesViewModel
     {
         public List<Employee> Employees { get; set; }
-        public List<AttendanceLog> AttendanceLogs { get; set; }
         public string TimeInInput { get; set; }
         public string TimeOutInput { get; set; }
-
+        public DateTime? Date { get; set; }
+        public string DateString { get; set; }
     }
 }

@@ -26,17 +26,12 @@ namespace Attendance.Controllers
         // GET: AttendanceRec
         public ActionResult Index()
         {
-            //var employees = _context.Employees.ToList();
-            //return View(employees);
-
-            var attendanceLogs = _context.AttendanceLogs.Include(v => v.Employee).ToList();
             var employees = _context.Employees.ToList();
             var viewModel = new EmployeesAttendancesViewModel()
             {
                 Employees = employees,
-                AttendanceLogs= attendanceLogs
+                Date = null
             };
-
             return View(viewModel);
         }
 
@@ -49,12 +44,13 @@ namespace Attendance.Controllers
 
         [HttpPost]
         [SubmitButtonSelector(Name = "SaveTimeIn")]
-        public ActionResult SaveTimeIn(EmployeesAttendancesViewModel viewModel, string EmpId, string Date)
+        public ActionResult SaveTimeIn(EmployeesAttendancesViewModel viewModel, string EmpId)
         {
             var newAttendanceRecord = new AttendanceLog()
             {
                 TimeIn = TimeSpan.Parse(viewModel.TimeInInput),
-                EmployeeId = int.Parse(EmpId)
+                EmployeeId = int.Parse(EmpId),
+                Date = viewModel.Date
             };
             _context.AttendanceLogs.Add(newAttendanceRecord);
             _context.SaveChanges();
@@ -68,10 +64,16 @@ namespace Attendance.Controllers
             var newAttendanceRecord = new AttendanceLog()
             {
                 TimeOut = TimeSpan.Parse(viewModel.TimeOutInput),
-                EmployeeId = int.Parse(EmpId)
+                EmployeeId = int.Parse(EmpId),
+                Date = viewModel.Date
             };
             _context.AttendanceLogs.Add(newAttendanceRecord);
             _context.SaveChanges();
+            return RedirectToAction("Index", "AttendanceRec");
+        }
+
+        public ActionResult Report()
+        {
             return RedirectToAction("Index", "AttendanceRec");
         }
     }
