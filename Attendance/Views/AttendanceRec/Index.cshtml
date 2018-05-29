@@ -8,18 +8,6 @@
 
 <h2>Регистрация посещений</h2>
 
-
-@*@using (Html.BeginForm("SaveTime", "AttendanceRec"))
-{*@
-
-    @*<div class="form-group">
-        <label>Дата</label>
-        @Html.TextBoxFor(m => Model.DateString, new { @class = "form-control" })
-        @Html.TextBox("dateInput")
-        <input value="" name="DateInput" />
-        @Html.TextBoxFor(Model.Select(m=>m.Id==5), new { @class = "form-control" })
-    </div>*@
-
     <table class="table">
         <tr>
             <th>Фамилия</th>
@@ -59,4 +47,3 @@
         }
 
     </table>
-@*}*@
