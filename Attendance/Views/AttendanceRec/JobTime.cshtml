@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Attendance.Models.AttendanceJobTime>
+
+@{
+    ViewBag.Title = "Log";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Рабочее время</h2>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    <tr>
+        <th>Номер записи</th>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Отчество</th>
+        <th>Должность</th>
+        <th>Отдел</th>
+        <th>Начало рабочего дня</th>
+        <th>Конец рабочего дня </th>
+        <th>Рабочее время</th>
+        <th>Дата</th>
+        <th>Опоздание</th>
+        <th>Недоработка</th>
+        <th>Переработка</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.Employee.Surname </td>
+        <td>@item.Employee.Name</td>
+        <td>@item.Employee.Patronymic</td>
+        <td>@item.Employee.Position</td>
+        <td>@item.Department.Name</td>
+        <td>@Html.DisplayFor(modelItem => item.DayStartTime)</td>
+        <td>@Html.DisplayFor(modelItem => item.DayFinishTime)</td>
+        <td>@item.JobTime</td>
+        @if (item.Date == null)
+        {
+            <td><text>Дата не определена</text></td>
+        }
+        else
+        {
+
+            <td>@(((DateTime)(item.Date)).ToLongDateString())</td>
+        }
+        <td>@item.IsLate</td>
+        <td>@item.IsJobTimeNotEnough</td>
+        <td>@item.IsJobTimeTooMuch</td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+        </td>
+    </tr>
+    }
+
+</table>
+
+

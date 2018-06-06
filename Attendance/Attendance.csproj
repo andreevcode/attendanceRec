@@ -329,6 +329,7 @@
     <Content Include="Views\AttendanceRec\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\AttendanceRec\Log.cshtml" />
+    <Content Include="Views\AttendanceRec\JobTime.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

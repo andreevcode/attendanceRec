@@ -42,6 +42,16 @@ namespace Attendance.Controllers
             return View(attendanceLog);
         }
 
+        [Route("AttendanceRec/jobtime/")]
+        public ActionResult JobTime()
+        {
+            var attendanceJobTimes = _context.AttendanceJobTimes
+                .Include(v => v.Employee)
+                .Include(v => v.Department)
+                .ToList();
+            return View(attendanceJobTimes);
+        }
+
         [HttpPost]
         [SubmitButtonSelector(Name = "SaveTimeIn")]
         public ActionResult SaveTimeIn(EmployeesAttendancesViewModel viewModel, string EmpId)
