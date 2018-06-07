@@ -250,6 +250,10 @@
     <Compile Include="Migrations\201805291106169_UpplyChangesToModels.Designer.cs">
       <DependentUpon>201805291106169_UpplyChangesToModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806071301043_DeleteDepartmentIdFromJobTimes.cs" />
+    <Compile Include="Migrations\201806071301043_DeleteDepartmentIdFromJobTimes.Designer.cs">
+      <DependentUpon>201806071301043_DeleteDepartmentIdFromJobTimes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AttendanceJobTime.cs" />
@@ -383,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805291106169_UpplyChangesToModels.resx">
       <DependentUpon>201805291106169_UpplyChangesToModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806071301043_DeleteDepartmentIdFromJobTimes.resx">
+      <DependentUpon>201806071301043_DeleteDepartmentIdFromJobTimes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

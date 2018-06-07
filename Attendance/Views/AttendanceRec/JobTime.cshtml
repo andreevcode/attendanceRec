@@ -16,15 +16,15 @@
         <th>Фамилия</th>
         <th>Имя</th>
         <th>Отчество</th>
-        <th>Должность</th>
-        <th>Отдел</th>
+        <th width="200px">Должность</th>
+        @*<th>Отдел</th>*@
         <th>Начало рабочего дня</th>
         <th>Конец рабочего дня </th>
         <th>Рабочее время</th>
-        <th>Дата</th>
-        <th>Опоздание</th>
-        <th>Недоработка</th>
-        <th>Переработка</th>
+        <th width="120px">Дата</th>
+        <th>Late</th>
+        <th>Less</th>
+        <th>Much</th>
         <th></th>
     </tr>
 
@@ -36,7 +36,7 @@
         <td>@item.Employee.Name</td>
         <td>@item.Employee.Patronymic</td>
         <td>@item.Employee.Position</td>
-        <td>@item.Department.Name</td>
+        @*<td>@item.Department.Name</td>*@
         <td>@Html.DisplayFor(modelItem => item.DayStartTime)</td>
         <td>@Html.DisplayFor(modelItem => item.DayFinishTime)</td>
         <td>@item.JobTime</td>
